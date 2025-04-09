@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Simulateur - C’est Ma Sauce</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Simulateur C’est Ma Sauce</h1>
+    <p>Choisissez votre scénario :</p>
+    <select id="scenario">
+        <option value="prudent">Prudent</option>
+        <option value="realiste">Réaliste</option>
+        <option value="ambitieux">Ambitieux</option>
+    </select>
+
+    <section>
+        <h2>Coûts immobiliers</h2>
+        Loyer mensuel : <input type="number" id="loyer" value="1500"> $<br>
+        Taxes municipales : <input type="number" id="taxes_muni" value="1392"> $<br>
+        Taxes scolaires : <input type="number" id="taxes_sco" value="37"> $<br>
+    </section>
+
+    <section>
+        <h2>Restaurant - Exploitation</h2>
+        Prix moyen par plat : <input type="number" id="prix_plat" value="14"> $<br>
+        Clients par jour : <input type="number" id="clients_jour" value="40"><br>
+    </section>
+
+    <section>
+        <h2>Production de sauce</h2>
+        Prix de vente par pot (B2C) : <input type="number" id="prix_b2c" value="13"> $<br>
+        Prix de vente par pot (B2I) : <input type="number" id="prix_b2i" value="9"> $<br>
+        Pots produits par jour : <input type="number" id="pots_jour" value="50"><br>
+    </section>
+
+    <button onclick="calculer()">Calculer</button>
+
+    <section id="resultats">
+        <h2>Résultats</h2>
+        <p id="revenus">Revenus mensuels : </p>
+        <p id="depenses">Dépenses mensuelles : </p>
+        <p id="profit">Profit mensuel : </p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
