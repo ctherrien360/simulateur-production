@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Tableau de bord de simulation stratégique</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Tableau de bord de simulation stratégique</h1>
+    <p>Entreprise : <input type="text" id="nom_entreprise" value="C’est Ma Sauce" oninput="majNomEntreprise()"></p>
+
+    <!-- Sections dynamiques -->
+    <div id="contenu_simulateur">
+        <!-- Contenu injecté dynamiquement -->
+    </div>
+
+    <!-- Zone Résultats globaux -->
+    <section id="resultats_globaux">
+        <h2>Résultats globaux</h2>
+        <div id="resultats_table"></div>
+        <canvas id="graph_revenus" width="600" height="300"></canvas>
+        <canvas id="graph_depenses" width="600" height="300"></canvas>
+    </section>
+
+    <!-- Scénarios -->
+    <section id="scenarios">
+        <h2>Scénarios</h2>
+        <select id="select_scenario" onchange="changerScenario()">
+            <option value="prudent">Scénario Prudent</option>
+            <option value="realiste">Scénario Réaliste</option>
+            <option value="ambitieux">Scénario Ambitieux</option>
+        </select>
+        <button onclick="dupliquerScenario()">Dupliquer ce scénario</button>
+    </section>
+
+    <!-- Export CSV -->
+    <section>
+        <h2>Export des données</h2>
+        <button onclick="exporterCSV()">Exporter les résultats en CSV</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
